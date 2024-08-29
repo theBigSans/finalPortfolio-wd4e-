@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montagu Slab', 'Times New Roman', Times, serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    object-fit: cover;
+}
+
+img{
+    max-width: 100%;
+}
+
+header nav {
+    width: 100vw;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;  
+    text-align: center;
+    padding: 2vw;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    font-size: 1em;
+}
+
+#introContent nav button:hover {
+    color: gray;
+}
+
+#introPage {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#introImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#introContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#introLine {
+    animation: blurr 1.5s ease;
+}
+
+#about {
+    background-color: white;
+    width: 100vw;
+    height: 75vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+}
+
+#sandwich {
+    margin-top: 50px;
+    max-width: 40%;
+    max-height: 40%;
+    object-fit: cover;
+}
+
+#about-p {
+    padding: 3%;
+}
+
+/* -----------MENU PAGE------------ */
+
+#menuPage {
+    background-color: rgb(41, 33, 4);
+    height: 60vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+h3{
+    text-align: center;
+    padding: 1%;
+}
+
+#menuPage nav{
+    width: 100vw;
+    display: flex;
+    left: 50%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 4vh;
+    padding: 1%;
+}
+
+#menu-placeholder{
+    text-align: center;
+    padding: 4%;
+    margin-top: 50px;
+}
+
+#container{
+    display: block;
+}
+
+#food{
+    text-align: left;
+    margin-top: 80px;
+    margin-left: 6%;
+    font-size: 1.1em;    
+}
+#imgs{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#imgs img{
+    height: 20vh;
+    width: 25vw;
+    max-width: 200px;
+    max-height: 400px;         
+    padding: 10px;
+}
+
+#prices{
+    text-align: right;
+    margin-top: -90px;
+    margin-right: 15%;
+    font-size: 1.1em;
+    padding: 1%;
+    list-style-type: none;
+    justify-content: end;
+    align-items: end;
+}
+
+button {
+    size: 70%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 1%;
+    font-family: 'Montagu Slab', 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    font-weight: bold;
+    color: grey;
+}
+/*------------------CONTACT PAGE----------------------*/
+#contactPage{
+    text-align: center;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#sendBtn{
+    background-color: rgb(41, 33, 4);
+    font-family: 'montagu Slab', 'Times New Roman', Times, serif;
+    color: white;
+}
+
+#address{
+    background-color: rgb(41, 33, 4);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1%;
+}
+
+#bread, #bread2{
+    display: none;
+}
+
+footer{
+    text-align: center;
+}
+
+@keyframes blurr {
+    from {
+        transform: translateX(-50vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width:500px) {
+    #bread, #bread2{
+        display: block;
+        padding-left: 2%;
+        padding-right: 2%;
+        height: 30vh;
+        width: 25vw;
+        height: 90%;
+    }
+}
+
+@media screen and (min-width:768px){
+    #introLine{
+        font-size: 2em;
+    }
+    #menuPage{
+        height: 70vh;
+    }
+    #menu-placeholder{
+        font-size: 1.3em;
+    }
+    #imgs img{
+        width: 25vw;
+        margin-bottom: 20px;
+    }
+    #food{
+        margin-top: 90px;
+        margin-left: 20%;
+        font-size: 1.5em;
+    }
+    #prices{
+        font-size: 1.5em;
+        margin-top: -120px;
+    }
+}
+
+@media screen and (min-width:900px) {
+    #about-p{
+        font-size: 1.3em;
+    }
+    #contactPage{
+        font-size: 1.3em;
+    }
+    button{
+        font-size: 0.8em;
+    }
+
+}
+
+@media all and (prefers-reduced-motion){
+    html{
+        scroll-behavior: auto;
+    }
+}
