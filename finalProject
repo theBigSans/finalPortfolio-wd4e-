@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap" rel="stylesheet">
+    <script src="js/lol.js"></script>
+    <title>RetroFe</title>
+</head>
+<body onload="tabIndex()">
+    <header>
+        <nav>
+            <button class="about-btn" onclick="document.getElementById('about').scrollIntoView()" style= "background-color:green;">About Us</button>
+            <button class="menu-btn" onclick="document.getElementById('menuPage').scrollIntoView()" style= "background-color:white; color: black;">Our Menu</button>
+            <button class="address-btn" onclick="document.getElementById('contactPage').scrollIntoView()" style= "background-color:red;">Contact Us</button> 
+        </nav>
+    </header>
+    <section id="introPage">
+        <img id="introImg" src="https://e1.pxfuel.com/desktop-wallpaper/250/941/desktop-wallpaper-cozy-coffee-shop-ambience-with-relaxing-jazz-music-rain-sounds-and-crackling-fireplace-cozy-autumn-cafe-window.jpg" alt="retro cafe background">
+        <div id="introContent">
+            <h1 id="introLine">Your <u>tastiest</u> Solution.</h1>
+        </div>
+    </section>
+    <section id="about">
+        <img src="https://static.vecteezy.com/ti/gratis-vektor/p1/9877787-pixel-art-sandwich-snack-fast-foodsymbol-fur-8bit-spiel-auf-weissem-hintergrund-vektor.jpg" id="sandwich" alt="Tasty Sandwich">
+        <h1 id="ab-h1">About Us</h1>
+        <p id="about-p">
+            <b>Welcome to <em>RetroFe</em>!</b><br>
+            Nestled in the heart of Sample City, we offer a cozy retreat with high-quality coffee,
+            fine teas, and homemade treats. Whether you're in the mood for a sweet treat or a comforting cup of your favorite brew, we have something to satisfy every craving.
+            Our friendly staff and warm atmosphere make us the
+            perfect spot to relax and unwind. Visit us today and experience the charm of RetroFe!
+        </p>
+    </section>
+    <section id="menuPage">
+        <nav>
+            <button id="baGo" onclick="fooFunc(goods), imgFunc('pie', 0)">Baked Goods</button> 
+            <button id="teas" onclick="fooFunc(teas), imgFunc('pixelTea', 1)">Teas</button> 
+            <button id="snacks" onclick="fooFunc(snacks), imgFunc('croissant', 2)">Snacks</button> 
+            <button id="coffee" onclick="fooFunc(coffee), imgFunc('coffee', 3)">Coffee</button>
+        </nav>
+        <h3 id="menu-placeholder">
+            Explore our delicious and carefully crafted menu, featuring a variety of baked goods, refreshing teas, savory snacks, and rich coffees! 
+            Our menu is designed to cater to all tastes, with both classic favorites and unique specialties.
+        </h3>
+        <div id="container">
+        <div id="food"></div><div id="prices"></div>
+        </div>
+        <div id="imgs"></div>
+    </section>
+    <section id="contactPage">
+        <img id="bread" src="https://static.vecteezy.com/system/resources/previews/009/726/947/original/pixel-art-bread-icon-for-8bit-game-on-white-background-vector.jpg" alt="bread">
+        <div id="contactCon">
+            <h1>We ♥ Feedback</h1>
+            <form action="https://formspree.io/f/mgvwlqkk" method="POST">
+                <label for="email"><b>Enter your e-mail:</b></label><br>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required><br>
+            
+                <label for="feedback"><b>Feedback:</b></label><br>
+                <textarea name="feedback" id="feedback" placeholder="Let it all out..." rows="5" cols="30" required></textarea><br>
+                
+                <input name="button" id="sendBtn" type="submit" value="Send">
+            </form>
+        </div>    
+        <img id="bread2" src="https://static.vecteezy.com/system/resources/previews/009/726/947/original/pixel-art-bread-icon-for-8bit-game-on-white-background-vector.jpg" alt="bread">
+    </section>
+    <footer>
+        <h4 id="address">Find us at Landstraßer Hauptstraße X || Vienna, Austria</h4>
+        © 2024 RetroFe Ibrahim Ali Örün <br>
+        All Rights Reserved.
+    </footer>
+</body>
+</html>
